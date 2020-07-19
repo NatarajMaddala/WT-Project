@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="log2.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	body {
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('bg3.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+</style>
+</head>
+<body>
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script></script>
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDyS3KK_jL4F7wTU2dollrbsP8NsFQLZik",
+    authDomain: "web-spoty.firebaseapp.com",
+    databaseURL: "https://web-spoty.firebaseio.com",
+    projectId: "web-spoty",
+    storageBucket: "web-spoty.appspot.com",
+    messagingSenderId: "181442345612",
+    appId: "1:181442345612:web:34a97923472469342b99a9",
+    measurementId: "G-D1ERTGQTS4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+	<div class="menubar">
+		<div class="logo">
+			<a href="index.html"><img src="111.png"></a>
+		</div>
+		<a href="index.html" class="ltext">Career Spot</a>
+		<div class="nav">
+			<a href="index.html">Home</a>
+			<a class="active" href="Login.html">Login</a>
+			<a href="about.html">About</a>
+			<a href="contact.html">Contact Us</a>
+		</div>
+	</div>
+	<div class="loginbox">
+		<img src= "avatar1.jpg" class="avatar">
+		<h1 style="text-align: center;padding: 0 0 20px;margin: 0; font-size: 22px; font-weight: 570;">Sign in</h1>
+		<form name="login">
+			<p>Email:</p>
+		 	<input type=text placeholder="Email" name="uname" id="email" required>
+			<p>Password:</p>
+			<input type=password placeholder="Password" id="pass" name="pass" required>
+			<br>
+			<label class="cb"><input type=checkbox id="" required onclick="fun()"><span class="cm"></span> &nbsp Show Password</label><br>
+			<input type=button name=submit onclick="lin()" value="Submit">
+			<br><br>
+			<a href="for pwd.html">Forgot Password?</a>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+			<a href="Register.html">Register</a>
+		</form>
+	</div>
+	<script>
+		function fun() {
+			var x = document.getElementById("pwd");
+			if(x.type === "password") {
+				x.type = "text";
+			}
+			else {
+				x.type = "password";
+			}
+		}
+	function lin() {
+    const config = {
+        apiKey: "AIzaSyDyS3KK_jL4F7wTU2dollrbsP8NsFQLZik",
+        authDomain: "web-spoty.firebaseapp.com",
+        databaseURL: "https://web-spoty.firebaseio.com",
+        storageBucket: "web-spoty.appspot.com",
+    };
+    const email = document.getElementById("email");
+    const pass = document.getElementById("pass");
+    const mail = email.value;
+    const pwd = pass.value;
+    const auth = firebase.auth();
+    const promise = auth.signInWithEmailAndPassword(mail, pwd);
+    promise.catch(e => console.log(e.message));
+    window.location.href = "index.html";
+	}
+	</script>
+	<footer style="margin-bottom:0;bottom:0;position: fixed;">
+		<div class="foot">
+			<h2>Career Spot</h2>
+			<p>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 
+			Careerspot.com All rights reserved</p>
+		</div>
+		<div class="footic">
+			<a href="https://www.facebook.com/maddala.natraj"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="https://www.instagram.com/raj_nat_raj/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+			<a href="https://twitter.com/MaddalaNatraj"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a href="https://www.linkedin.com/in/nataraj-maddala-0b856617b"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+		</div>
+	</footer>
+</body>
+</html>
