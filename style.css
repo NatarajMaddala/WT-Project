@@ -1,0 +1,791 @@
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans'), url('ProductSans-Regular.woff') format('woff');
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Product Sans;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.body {
+  -ms-overflow-style: none;
+}
+.menubar {
+	overflow: hidden;
+	background-color: #333333;
+}
+.nav a {
+  float: left;
+  color: #ffd700;
+  text-align: center;
+  padding: 18px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.nav a:hover {
+	background-color: #b3b3b3;
+	color: black;
+}
+.menubar a.active {
+	background-color: #fff8dc;
+	color: #396060;
+}
+
+.nav {
+  float: right;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  padding-top: 7px;
+  float: left;
+}
+
+.ltext {
+  text-decoration: none;
+  /*text-align: center;*/
+  color: #ffd700;
+  line-height: 50px;
+  margin-top: 10px;
+  padding-top: 50px;
+  margin-left: 1%;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/*.slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vh;
+  padding-top: 20%;
+}*/
+.container {
+  padding-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container .box{
+  position: relative;
+  width: 350px;
+  padding: 40px;
+  background: #f5f5f5;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.container .box .content {
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.container .box:hover .content {
+  color: white;
+}
+
+.container .box:nth-child(1):hover .eh {
+  box-shadow: 0 0 0 400px #e91e63;
+  background: #e91e63;
+}
+
+.container .box:nth-child(2):hover .mh {
+  box-shadow: 0 0 0 400px #2196f3;
+  background: #2196f3;
+}
+
+.container .box:nth-child(3):hover .ah {
+  box-shadow: 0 0 0 400px #23e629;
+  background: #23e629;
+}
+
+.container .box:nth-child(4):hover .bh {
+  box-shadow: 0 0 0 400px rgb(253, 118, 64);
+  background: rgb(253, 118, 64);
+}
+
+.container .box:nth-child(5):hover .lh {
+  box-shadow: 0 0 0 400px rgb(35, 209, 200);
+  background: rgb(35, 209, 200);
+}
+
+.container .box:nth-child(6):hover .arh {
+  box-shadow: 0 0 0 400px palevioletred;
+  background: palevioletred;
+}
+
+.container .box .content .eh {
+  color: rgba(255, 255, 255, 0.856);
+  font-size: 25px;
+  text-align: center;
+  /*margin: 10px 0;*/
+  margin-left: 85px;
+  margin-right: 100px;
+  border-radius: 40px;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+  font-weight: 550;
+  background-color: #e91e63;
+  transition: 0.4s;
+}
+
+.container .box .content .mh {
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.886);
+  text-align: center;
+  /*margin: 10px 0;*/
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 40px;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+  font-weight: 550;
+  background-color: #2196f3;
+  transition: 0.4s;
+}
+
+.container .box .content .ah {
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.856);
+  text-align: center;
+  /*margin: 10px 0;*/
+  margin-left: 90px;
+  margin-right: 100px;
+  border-radius: 40px;
+  transition: 0.4s;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+  font-weight: 550;
+  background-color: #23e629;
+}
+
+.container .box .content .bh {
+  color: rgba(255, 255, 255, 0.856);
+  font-size: 25px;
+  text-align: center;
+  /*margin: 10px 0;*/
+  margin-left: 50px;
+  margin-right: 65px;
+  border-radius: 40px;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+  font-weight: 550;
+  background-color: rgb(253, 118, 64);
+  transition: 0.4s;
+}
+
+.container .box .content .lh {
+  color: rgba(255, 255, 255, 0.856);
+  font-size: 25px;
+  text-align: center;
+  /*margin: 10px 0;*/
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 40px;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+  font-weight: 550;
+  background-color: rgb(35, 209, 200);
+  transition: 0.4s;
+}
+
+.container .box .content .arh {
+  color: rgba(255, 255, 255, 0.856);
+  font-size: 25px;
+  text-align: center;
+  /*margin: 10px 0;*/
+  margin-left: 80px;
+  margin-right: 80px;
+  border-radius: 40px;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+  font-weight: 550;
+  background-color: palevioletred;
+  transition: 0.4s;
+}
+
+.container .box .content p {
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+.container .box .content a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: rgb(220, 20, 60);
+  border-radius: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #333333;
+  color: #ffd700;
+  height: 60px;
+  margin-bottom: 0;
+}
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  float: left;
+}
+.foot h2 {
+  letter-spacing: .5px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.foot p {
+  margin-left: 20px;
+  line-height: 30px;
+  letter-spacing: .5px;
+}
+.footic {
+  float: right;
+  font-size: 24px;
+  padding-top: 15px;
+  margin-right: 15px;
+}
+.footic a {
+  color: #ffd700;
+}
+.footic i {
+  margin-left: 10px;
+}
+
+/* LOGIN PAGE*/
+.loginbox {
+  width: 350px;
+  height: 530px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  top: 53%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 80px 30px;
+  margin-bottom: 140px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 90%;
+  position: absolute;
+  top: -35px;
+  left: calc(50% - 50px);
+}
+
+.loginbox p {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+.loginbox input {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.loginbox input[type="text"] {
+  font-size: 22px;
+}
+.loginbox input[type="text"], input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #ffd700;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #ffd700;
+  font: 22px;
+}
+.loginbox input[type="button"] {
+  border: 0;
+  outline: none;
+  height: 40px;
+  background: #ffd700;
+  color: black;
+  font-size: 16px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.loginbox input[type="button"]:hover {
+  background: #e6c300;
+}
+.loginbox a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 10px;
+  color: gray;
+}
+.loginbox a:hover {
+  color: #ffd700;
+}
+
+/*REGISTER PAGE*/
+.registerbox {
+  width: 450px;
+  height: 1250px;
+  margin-top: 7%;
+  margin-left: 33%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0px 40px;
+}
+.registerbox p {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+.registerbox input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.registerbox input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  background: transparent;
+  color: #ffd700;
+  border: none;
+  border-bottom: 1px solid #e6c300;
+  font-size: 22px;
+  outline: none;
+  height: 40px;
+}
+.registerbox textarea {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: transparent;
+  color: #ffd700;
+  border: none;
+  border-bottom: 1px solid #e6c300;
+  border-top: 1px solid #e6c300;
+  border-left: 1px solid #e6c300;
+  border-right: 1px solid #e6c300;
+  font-size: 18px;
+  outline: none;
+}
+.registerbox select {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.registerbox input[type="radio"] {
+  color: #ffd700;
+}
+.rcont {
+  cursor: pointer;
+  padding-left: 5px;
+  margin-bottom: 20px;
+}
+.rcont input[type="radio"] {
+  display: none;
+}
+.rcont span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: 2px solid #ffd700;
+  border-radius: 50%;
+}
+.rcont span::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  display: block;
+  left: 50%;
+  position: absolute;
+  right: 50%;
+  border-radius: 50%;
+}
+.rcont input:checked+span {
+  background-color: #ffd700;
+}
+select {
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  background: black;
+  color: #ffd700;
+  border: 0 !important;
+}
+.cs2 {
+  border-radius: 25px;
+  position: relative;
+  width:15em;
+  height: 2.5em;
+  background: black;
+  overflow: hidden;
+  line-height: 2.5;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.cs {
+  border-radius: 25px;
+  position: relative;
+  display: inline-block;
+  width:15em;
+  height: 2.5em;
+  background: black;
+  overflow: hidden;
+  line-height: 2.5;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 0.5em;
+  font-size: 14px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}
+/*.cs::after {
+  content: '\25bc';
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  transition: 0.5s all ease;
+  background: rgb(54, 54, 54);
+  pointer-events: none;
+}
+.cs:hover::after {
+  color: #ffd700;
+}*/
+.cb input {
+  display: none;
+}
+.cb {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  user-select: none;
+  position: relative;
+}
+.cb .cm {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: darkgray;
+  position: relative;
+  left: 0;
+  top: 0;
+  border-radius: 3px;
+}
+.cb input:checked + .cm {
+  background-color: black;
+}
+.cb:hover .cm {
+  background-color: #fff;
+}
+.cb input:checked + .cm:after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 4px;
+  border-left: 2px solid #ffd700;
+  border-bottom: 2px solid #ffd700;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+.registerbox input[type="button"] {
+  border: 0;
+  width: 100%;
+  outline: none;
+  height: 40px;
+  background: #ffd700;
+  color: black;
+  font-size: 16px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.registerbox input[type="button"]:hover {
+  background: #e6c300;
+}
+
+/*ABOUT PAGE*/
+.about {
+  overflow: hidden;
+  text-align: center;
+  color: rgb(247, 159, 45);
+  background: rgba(0, 0, 0, 0.75);
+  margin-left: 14%;
+  margin-top: 5%;
+  margin-bottom: 30px;
+  width: 1080px;
+  height: 550px;
+}
+.about h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.bord {
+  display: block;
+  background: #396060;
+  width: 250px;
+  height: 5px;
+  margin: auto;
+  margin-bottom: 40px;
+  border-radius: 15px;
+}
+.bord1 {
+  display: block;
+  background: #396060;
+  width: 250px;
+  height: 5px;
+  margin: auto;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+.dp {
+  margin-bottom: 40px;
+}
+.dp a {
+  display: inline-block;
+  margin: 0 30px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #e6c300;
+}
+.dp a img {
+  width: 100%;
+  margin-right: 50px;
+}
+.section {
+  width: 600px;
+  margin: auto;
+  font-size: 20px;
+  letter-spacing: 0.7px;
+}
+.name {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.fpass {
+  margin-left: 36%;
+  margin-top: 8%;
+  background-color: rgba(255, 255, 255, 0.87);
+  width: 400px;
+  height:300px;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 5px 15px;
+}
+.fph {
+  font-size: 30px;
+  text-align: center;
+  /*margin: 10px 0;*/
+  margin-left: 75px;
+  margin-right: 90px;
+  border-radius: 40px;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  font-weight: 550;
+  background-color: #ffd700;
+}
+.fpass input[type=email] {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 2px solid dodgerblue;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 50px;
+}
+.fpass .fcontent {
+  font-size: 20px;
+  letter-spacing: .5px;
+}
+.fpass input[type=button] {
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  margin-left: 140px;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: rgb(220, 20, 60);
+  color: white;
+  padding: 7px 20px;
+  border-radius: 40px;
+}
+
+.ccont {
+  margin-top: 10%;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  background-color: #2f3542;
+  padding: 0 20px;
+  margin: 0 10px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  border-radius: 25px;
+}
+.cicon {
+  background-color: #ffd700;
+  color: #2f3542;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px !important;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  transition: 0.32s linear;
+}
+.card:hover .cicon {
+  background: none;
+  color: #ffd700;
+  transform: scale(1.6);
+}
+.card p {
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+.card:hover p {
+  max-height: 40px;
+  opacity: 1;
+}
+@media screen and (max-width:1200px) {
+  .ccont {
+    flex-direction: column;
+    padding-bottom: 70px;
+  }
+  .contact {
+    align-items: center;
+    margin-top: 3%;
+    color: white;
+  }
+  .card {
+    max-width: 300px;
+    margin: 10px 0;
+  }
+  .about {
+    max-width: 650px;
+  }
+  .med {
+    max-height: 3600px;;
+  }
+}
+
+/*Engineering Page*/
+.acc {
+  position: relative;
+  margin-top: 100px;
+  height: 1750px;
+}
+.accordion {
+  background-color: #333333;
+  color: #ffd700;
+  cursor: pointer;
+  padding: 18px;
+  width: 90%;
+  margin-left: 5%;
+  font-size: 22px;
+  border: none;
+  text-align: left;
+  outline: none;
+  letter-spacing: .5px;
+  transition: 0.4s;
+}
+
+ .accordion:hover, .accordion.active {
+  background-color: #fff8dc;
+	color: #396060;
+}
+
+.accordion:after {
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #2f3542;
+  color: #ff6348;
+  width: 87.65%;
+  margin-left: 5%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.panel p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  letter-spacing: .5px;
+}
+
+.med {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 30px;
+  height: 1390px;
+  background-color: rgba(255, 255, 255, 0.781);
+}
+.agro {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 30px;
+  height: 1700px;
+  background-color: rgba(255, 255, 255, 0.781);
+}
+.med .p1, .agro .p1 {
+  padding-top: 20px;
+}
+.med p,  .agro p{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  letter-spacing: .5px;
+  line-height: 25px;
+  color: black;
+}
+.med h2, .agro h2{
+  padding-left: 20px;
+  color: #ffd700;
+}
